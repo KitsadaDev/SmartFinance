@@ -1,144 +1,137 @@
-<h1 align="center">
-  💰 SmartFinance
-</h1>
+# 🚀 SmartFinance - ระบบบริหารจัดการการเงินส่วนบุคคลระดับพรีเมียม
 
-<p align="center">
-  <strong>ระบบบริหารจัดการการเงินส่วนบุคคลระดับพรีเมียม</strong><br/>
-  Personal Finance Management System with Premium Glassmorphism Design
-</p>
+**SmartFinance** เป็นเว็บแอปพลิเคชันระบบบริหารจัดการการเงินส่วนบุคคลระดับ SaaS ที่ได้รับการออกแบบอินเตอร์เฟสแบบพรีเมียม (Premium Glassmorphism Design) พร้อมด้วยการจัดการฐานข้อมูลด้วย **PostgreSQL** และทำข้อมูลสถิติรายงานเชิงลึกครบครัน
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-16-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma&logoColor=white" />
-</p>
+## ✨ คุณเด่นและฟังก์ชันการใช้งาน (Key Features)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/TailwindCSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <img src="https://img.shields.io/badge/Zustand-State_Mgmt-FF6154?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Vite-Build_Tool-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-</p>
+### 1. 📊 แดชบอร์ดภาพรวมการเงิน (Dashboard Overview)
 
----
+- แสดงยอดเงินคงเหลือจากทุกบัญชีรวมกัน, รายรับรวม และรายจ่ายรวมรายเดือน
+- กราฟสรุปกระแสเงินสดเชิงเปรียบเทียบและอัตราสัดส่วนการเงิน
+- ระบบแจ้งเตือนอัจฉริยะกรณีมีงบประมาณเกิน (Over budget) หรือแจ้งรายการทำธุรกรรมอัตโนมัติ
 
-## 📖 เกี่ยวกับโปรเจกต์ (About)
+### 2. 💼 ระบบจัดการบัญชีธนาคารและกระเป๋าเงิน (Account Management)
 
-**SmartFinance** คือเว็บแอปพลิเคชันบริหารจัดการการเงินส่วนบุคคลแบบครบวงจร ออกแบบด้วยสไตล์ **Premium Glassmorphism** ที่ให้ความรู้สึกทันสมัยและใช้งานง่าย รองรับการติดตามรายรับ-รายจ่าย, การจัดการงบประมาณ, รายงานเชิงลึกพร้อมกราฟ, และการส่งออกรายงาน PDF — ทั้งหมดขับเคลื่อนด้วย **PostgreSQL** ผ่าน **Prisma ORM**
+- เพิ่มและตั้งค่าบัญชีเงินสด, บัญชีธนาคาร, บัตรเครดิต, หรือ E-wallet
+- ตรวจสอบประวัติการเงินเฉพาะบัญชี และสถานะการบันทึกเอกสารยอดเงินในแต่ละบัญชี
 
----
+### 3. 💸 บันทึกธุรกรรมรวดเร็ว & รองรับไฟล์ใบเสร็จ (Smart Transactions & Attachments)
 
-## ✨ ฟีเจอร์หลัก (Key Features)
+- บันทึกรายรับ รายจ่าย หรือการโอนเงินระหว่างบัญชี (Transfer)
+- หน้าฟอร์มแบบพรีเมียม เลือกบัญชีและหมวดหมู่ย่อยได้สะดวกรวดเร็ว
+- รองรับการแนบภาพถ่ายใบเสร็จ (Receipt Upload) บันทึกแบบ Base64 ถ่ายโอนข้อมูลได้รวดเร็ว
+- **การตั้งค่าธุรกรรมเกิดซ้ำ (Recurring Transactions):** กำหนดรอบทำซ้ำแบบรายวัน, รายสัปดาห์, รายเดือน หรือรายปีล่วงหน้าได้
 
-### 📊 แดชบอร์ดภาพรวมการเงิน
-- แสดงยอดเงินคงเหลือรวมทุกบัญชี, รายรับ และรายจ่ายรายเดือน
-- กราฟเปรียบเทียบกระแสเงินสดและสัดส่วนทางการเงิน
-- การแจ้งเตือนอัจฉริยะเมื่องบประมาณใกล้เต็มหรือเกิน
+### 4. 📈 การวิเคราะห์เชิงลึกและรายงาน (Reports & Analytics)
 
-### 💼 ระบบจัดการบัญชี (Account Management)
-- รองรับบัญชีเงินสด, ธนาคาร, บัตรเครดิต และ E-Wallet
-- ติดตามประวัติและยอดเงินแยกแต่ละบัญชีได้อย่างละเอียด
+- แผนภูมิแสดงโครงสร้างค่าใช้จ่ายตามหมวดหมู่ (Expense Breakdown Donut Chart)
+- กราฟแท่งเปรียบเทียบรายรับ-รายจ่ายรายเดือน (Income vs Expense Bar Chart)
+- กราฟเส้นแสดงแนวโน้มยอดเงินคงเหลือสะสมสุทธิรายปี (Net Cash Flow Trend Line Chart)
+- รายงานสรุปตารางการเปรียบเทียบสัดส่วนเปอร์เซ็นต์หมวดหมู่
 
-### 💸 บันทึกธุรกรรมอัจฉริยะ (Smart Transactions)
-- บันทึกรายรับ, รายจ่าย และการโอนเงินระหว่างบัญชี (Transfer)
-- รองรับการแนบภาพถ่ายใบเสร็จ (Receipt Upload via Base64)
-- **Recurring Transactions** — กำหนดธุรกรรมเกิดซ้ำ รายวัน / รายสัปดาห์ / รายเดือน / รายปี
+### 5. 🎯 การบริหารจัดการงบประมาณ (Budgets Control)
 
-### 📈 รายงานและการวิเคราะห์เชิงลึก (Reports & Analytics)
-- **Donut Chart** — สัดส่วนค่าใช้จ่ายแยกตามหมวดหมู่
-- **Bar Chart** — เปรียบเทียบรายรับ vs รายจ่ายรายเดือน
-- **Line Chart** — แนวโน้มกระแสเงินสดสุทธิสะสมรายปี
-- ตารางสรุปเปอร์เซ็นต์สัดส่วนหมวดหมู่
+- ตั้งค่าเป้าหมายงบประมาณรายเดือนแยกตามหมวดหมู่หลัก
+- แถบความคืบหน้า (Progress Bar) แจ้งเตือนสี่เหลี่ยมสีสวยงามตามระดับการใช้จ่าย (ปกติ / เตือนเกิน 80% / เกินงบประมาณ 100%)
 
-### 🎯 การจัดการงบประมาณ (Budget Control)
-- ตั้งเป้าหมายงบประมาณรายเดือนแยกตามหมวดหมู่
-- Progress Bar แสดงสถานะการใช้จ่าย (ปกติ / เตือน 80% / เกินงบ 100%)
+### 6. ⚙️ การตั้งค่าขั้นสูง การส่งออกเอกสาร และความปลอดภัย (Settings & Backups)
 
-### ⚙️ การตั้งค่าและนำเข้า/ส่งออกข้อมูล
-- **ดาวน์โหลด PDF** — รายงานสรุปภาพรวมและเดินบัญชีแบบ A4
-- **JSON Backup** — สำรองและกู้คืนข้อมูลทั้งหมด
-- **CSV Import** — นำเข้าข้อมูลพร้อมจับคู่คอลัมน์และป้องกันข้อมูลซ้ำ
-- **Danger Zone Reset** — รีเซ็ตข้อมูลทั้งหมดอย่างปลอดภัย
+- **ดาวน์โหลดรายงาน PDF:** สร้างไฟล์รายงาน PDF สรุปภาพรวมทางการเงินและรายการเดินบัญชีขนาด A4 สวยงามเป็นระเบียบ
+- **สำรองข้อมูลและนำเข้า (JSON):** ส่งออกและนำเข้าข้อมูลประวัติทางการเงินทั้งหมดของระบบผ่านไฟล์ JSON
+- **นำเข้าผ่าน CSV (CSV Import & Mapping):** รองรับการอัปโหลดไฟล์ตาราง `.csv` พร้อมฟังก์ชันจับคู่คอลัมน์และป้องกันการนำเข้าข้อมูลซ้ำซ้อนโดยอัตโนมัติ
+- **Danger Zone Reset:** ระบบรีเซ็ตล้างข้อมูลทั้งหมดเพื่อเริ่มต้นใหม่ได้อย่างปลอดภัยผ่านฐานข้อมูล PostgreSQL
 
 ---
 
 ## 🛠️ เทคโนโลยีที่ใช้ (Tech Stack)
 
-| Layer | Technology |
-|---|---|
-| **Frontend** | React 19, TypeScript, Vite, TailwindCSS v4 |
-| **State** | Zustand |
-| **Charts** | Recharts |
-| **PDF** | jsPDF, jsPDF-Autotable |
-| **CSV** | PapaParse |
-| **Icons** | Lucide React |
-| **Backend** | Node.js, Express.js (REST API) |
-| **ORM** | Prisma Client |
-| **Database** | PostgreSQL |
+### Frontend (Client)
+
+- **Core:** React 19, TypeScript, Vite
+- **Styling:** TailwindCSS v4, Vanilla CSS (Glassmorphism design tokens)
+- **State Management:** Zustand
+- **Libraries:** Recharts (แผนภูมิข้อมูล), jsPDF & jsPDF-Autotable (ระบบสร้าง PDF), PapaParse (ระบบแกะไฟล์ CSV), Lucide React (ไอคอนพรีเมียม)
+
+### Backend (Server)
+
+- **Core:** Node.js, Express (REST API)
+- **ORM:** Prisma Client
+- **Database:** PostgreSQL (ฐานข้อมูลหลักประสิทธิภาพสูง)
 
 ---
 
-## 📥 การติดตั้ง (Installation & Setup)
+## 📥 ขั้นตอนการติดตั้งและเริ่มใช้งาน (Installation & Setup)
 
-### 1. Clone โปรเจกต์
+### 1. โคลนคลังข้อมูลโปรเจกต์
+
 ```bash
 git clone https://github.com/KitsadaDev/SmartFinance.git
 cd SmartFinance
 ```
 
-### 2. ตั้งค่า Backend (Server)
-```bash
-cd server
-npm install
-```
+### 2. ตั้งค่าและรันฝั่ง Backend (Server)
 
-สร้างไฟล์ `.env`:
-```env
-DATABASE_URL="postgresql://<username>:<password>@localhost:5432/smartfinance?schema=public"
-PORT=3001
-```
+1. ไปยังโฟลเดอร์ `server` และติดตั้ง Packages:
+   ```bash
+   cd server
+   npm install
+   ```
+2. สร้างไฟล์ `.env` สำหรับเชื่อมโยงกับฐานข้อมูล PostgreSQL:
+   ```env
+   DATABASE_URL="postgresql://<username>:<password>@localhost:5432/money?schema=public"
+   PORT=3001
+   ```
+3. สั่งรัน Migration เพื่อสร้างโครงสร้างตารางข้อมูลในฐานข้อมูล:
+   ```bash
+   npx prisma migrate dev --name init
+   ```
+4. รันระบบข้อมูลตั้งต้น (Seeding - สกุลเงิน/หมวดหมู่หลัก):
+   ```bash
+   npx prisma db seed
+   ```
+5. เริ่มการรัน Server พัฒนา:
+   ```bash
+   npm run dev
+   ```
 
-รัน Migration และ Seed:
-```bash
-npx prisma migrate dev --name init
-npx prisma db seed
-npm run dev
-```
+### 3. ตั้งค่าและรันฝั่ง Frontend (Client)
 
-### 3. ตั้งค่า Frontend (Client)
-```bash
-cd ../client
-npm install
-npm run dev
-```
-
-เปิดเบราว์เซอร์ที่ → [http://localhost:5173](http://localhost:5173)
+1. ไปยังโฟลเดอร์ `client` และติดตั้ง Packages:
+   ```bash
+   cd ../client
+   npm install
+   ```
+2. เริ่มต้นรันระบบหน้าเว็บพัฒนา:
+   ```bash
+   npm run dev
+   ```
+3. เปิดเว็บบราวเซอร์ไปยัง: [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 📂 โครงสร้างโปรเจกต์ (Project Structure)
+## 📂 โครงสร้างโฟลเดอร์หลัก (Folder Directory Structure)
 
-```
+```text
 SmartFinance/
-├── client/                    # React & Vite Frontend
-│   └── src/
-│       ├── components/        # UI Layout & Transaction Modal
-│       ├── store/             # Zustand State Stores
-│       ├── views/             # Pages (Dashboard, Transactions, Reports, ...)
-│       └── types/             # TypeScript Type Definitions
+├── client/                 # React & Vite Frontend Application
+│   ├── src/
+│   │   ├── components/     # UI Layout & Transaction Modal
+│   │   ├── store/          # Zustand State Stores
+│   │   ├── views/          # หน้าต่างเมนูต่างๆ (Dashboard, Transactions, Settings, ฯลฯ)
+│   │   └── types/          # Type Definitions (TypeScript)
+│   ├── package.json
+│   └── vite.config.ts
 │
-├── server/                    # Node.js & Express Backend
-│   ├── prisma/                # Schema & Migrations
-│   └── src/
-│       ├── routes/            # API Endpoint Routers
-│       └── index.js           # Server Entry Point
+├── server/                 # Express & Node.js Backend API
+│   ├── prisma/             # Schema & Database Migration
+│   ├── src/
+│   │   ├── routes/         # API Endpoint Routers
+│   │   └── index.js        # Backend Entrypoint
+│   └── package.json
 │
 └── README.md
 ```
 
 ---
 
-<p align="center">
-  จัดทำและดูแลโดย <strong><a href="https://github.com/KitsadaDev">KitsadaDev</a></strong>
-</p>
+_จัดทำขึ้นและดูแลระบบโดย KitsadaDev_
