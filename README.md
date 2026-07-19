@@ -2,10 +2,6 @@
 
 **SmartFinance** เป็นเว็บแอปพลิเคชันระบบบริหารจัดการการเงินส่วนบุคคลระดับ SaaS ที่ได้รับการออกแบบอินเตอร์เฟสแบบพรีเมียม (Premium Glassmorphism Design) พร้อมด้วยการจัดการฐานข้อมูลด้วย **PostgreSQL** และทำข้อมูลสถิติรายงานเชิงลึกครบครัน
 
-![SmartFinance UI Interface Preview](client/src/assets/SmartFinance.png)
-
----
-
 ## ✨ คุณเด่นและฟังก์ชันการใช้งาน (Key Features)
 
 ### 1. 📊 แดชบอร์ดภาพรวมการเงิน (Dashboard Overview)
