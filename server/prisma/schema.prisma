@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Settings {
+  id       Int    @id @default(1)
+  name     String @default("")
+  currency String @default("THB")
+  theme    String @default("light")
+  timezone String @default("Asia/Bangkok")
+}
+
+model Account {
+  id              String        @id @default(uuid())
+  name            String
+  type            String
+  balance         Float         @default(0)
+  currency        String        @default("THB")
+  icon            String        @default("Wallet")
+  color           String        @default("#6366F1")
+  is_archived     Boolean       @default(false)
+  created_at      DateTime      @default(now())
+  transactions    Transaction[] @relation("AccountTransactions")
+  to_transactions Transaction[] @relation("ToAccountTransactions")
+}
+
+model Category {
+  id           String        @id @default(uuid())
+  name         String
+  type         String
+  parent_id    String?
+  icon         String        @default("Tag")
+  color        String        @default("#6B7280")
+  created_at   DateTime      @default(now())
+  budgets      Budget[]
+  parent       Category?     @relation("CategoryChildren", fields: [parent_id], references: [id])
+  children     Category[]    @relation("CategoryChildren")
+  transactions Transaction[]
+}
+
+model Transaction {
+  id               String    @id @default(uuid())
+  account_id       String
+  category_id      String?
+  to_account_id    String?
+  type             String
+  amount           Float
+  note             String    @default("")
+  receipt_url      String?
+  transaction_date String
+  created_at       DateTime  @default(now())
+  account          Account   @relation("AccountTransactions", fields: [account_id], references: [id], onDelete: Cascade)
+  category         Category? @relation(fields: [category_id], references: [id])
+  to_account       Account?  @relation("ToAccountTransactions", fields: [to_account_id], references: [id])
+}
+
+model Budget {
+  id          String   @id @default(uuid())
+  category_id String
+  amount      Float
+  month       Int
+  year        Int
+  created_at  DateTime @default(now())
+  category    Category @relation(fields: [category_id], references: [id], onDelete: Cascade)
+
+  @@unique([category_id, month, year])
+}
+
+model RecurringRule {
+  id                   String   @id @default(uuid())
+  template_transaction Json
+  frequency            String
+  start_date           String
+  end_date             String?
+  next_run_date        String
+  created_at           DateTime @default(now())
+}
