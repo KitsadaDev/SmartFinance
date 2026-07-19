@@ -68,7 +68,7 @@ cd SmartFinance
    ```
 2. สร้างไฟล์ `.env` สำหรับเชื่อมโยงกับฐานข้อมูล PostgreSQL:
    ```env
-   DATABASE_URL="postgresql://postgres:0624216512yhnmju@localhost:5432/money?schema=public"
+   DATABASE_URL="postgresql://<username>:<password>@localhost:5432/money?schema=public"
    PORT=3001
    ```
 3. สั่งรัน Migration เพื่อสร้างโครงสร้างตารางข้อมูลในฐานข้อมูล:
